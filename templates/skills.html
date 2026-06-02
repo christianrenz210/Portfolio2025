@@ -46,11 +46,11 @@
 
         <nav class="desktop-nav">
             <ul>
-                <li><a href="{{url_for('home')}}">🏠 Home</a></li>
-                <li><a href="{{url_for('about')}}">👨‍💻 About</a></li>
-                <li><a href="#skills" class="active">💼 Skills</a></li>
-                <li><a href="{{url_for('projects')}}">📂 Projects</a></li>
-                <li><a href="{{url_for('contact')}}">✉️ Contact</a></li>
+                <li><a href="{{url_for('home')}}"><i class="fa-solid fa-house"></i> Home</a></li>
+                <li><a href="{{url_for('about')}}"><i class="fa-solid fa-user"></i> About</a></li>
+                <li><a href="#skills" class="active"><i class="fa-solid fa-briefcase"></i> Skills</a></li>
+                <li><a href="{{url_for('projects')}}"><i class="fa-solid fa-folder-open"></i> Projects</a></li>
+                <li><a href="{{url_for('contact')}}"><i class="fa-solid fa-envelope"></i> Contact</a></li>
                 <label class="switch mode-toggle">
                     <input type="checkbox">
                     <span class="slider"></span>
@@ -63,11 +63,11 @@
     <!-- Sidebar -->
     <nav class="sidebar" id="sidebar">
         <ul>
-            <li><a href="{{ url_for('home') }}" onclick="closeSidebar()">🏠 Home</a></li>
-            <li><a href="{{ url_for('about') }}" onclick="closeSidebar()">👨‍💻 About</a></li>
-            <li><a href="{{url_for('skills')}}" class="active" onclick="closeSidebar()">💼 Skills</a></li>
-            <li><a href="{{url_for('projects')}}" onclick="closeSidebar()">📂 Projects</a></li>
-            <li><a href="{{url_for('contact')}}" onclick="closeSidebar()">✉️ Contact</a></li>
+            <li><a href="{{ url_for('home') }}" onclick="closeSidebar()"><i class="fa-solid fa-house"></i> Home</a></li>
+            <li><a href="{{ url_for('about') }}" onclick="closeSidebar()"><i class="fa-solid fa-user"></i> About</a></li>
+            <li><a href="{{url_for('skills')}}" class="active" onclick="closeSidebar()"><i class="fa-solid fa-briefcase"></i> Skills</a></li>
+            <li><a href="{{url_for('projects')}}" onclick="closeSidebar()"><i class="fa-solid fa-folder-open"></i> Projects</a></li>
+            <li><a href="{{url_for('contact')}}" onclick="closeSidebar()"><i class="fa-solid fa-envelope"></i> Contact</a></li>
             <li class="sidebar-toggle">
                 <label class="switch mode-toggle">
                     <input type="checkbox">
