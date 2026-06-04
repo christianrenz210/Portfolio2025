@@ -183,56 +183,82 @@
     <!-- CERTIFICATES -->
     <section class="certificates-content" id="certificates">
         <h1 class="theme-text3">Certificates</h1>
-        <div class="certificates-grid">
-            <a href="{{ url_for('static', filename='../static/certificates/NetworkingBasicsUpdate20251016-30-isbwer_page-0001.jpg')}}" target="_blank" style="text-decoration: none;">
-                <div class="certificate-card">
-                    <img src="{{ url_for('static', filename='../static/certificates/NetworkingBasicsUpdate20251016-30-isbwer_page-0001.jpg')}}" alt="Networking Basic">
-                    <h3>Networking Basic</h3>
-                    <p>Issued by Cisco Networking Academy • 2024</p>
-                </div>
-            </a>
-            <a href="{{ url_for('static', filename='../static/certificates/NetworkSupportandSecurityUpdate20251016-32-1hk533_page-0001.jpg')}}" target="_blank" style="text-decoration: none;">
-                <div class="certificate-card">
-                    <img src="{{ url_for('static', filename='../static/certificates/NetworkSupportandSecurityUpdate20251016-32-1hk533_page-0001.jpg')}}" alt="Network Support Security">
-                    <h3>Networking Support Security Update</h3>
-                    <p>Issued by Cisco Networking Academy • 2024</p>
-                </div>
-            </a>
-            <a href="{{ url_for('static', filename='../static/certificates/NetworkAddressingandBasicTroubleshootingUpdate20251016-28-ekc7ve_page-0001.jpg')}}" target="_blank" style="text-decoration: none;">
-                <div class="certificate-card">
-                    <img src="{{ url_for('static', filename='../static/certificates/NetworkAddressingandBasicTroubleshootingUpdate20251016-28-ekc7ve_page-0001.jpg')}}" alt="Network Addressing">
-                    <h3>Networking Addressing And Basic Troubleshooting</h3>
-                    <p>Issued by Cisco Networking Academy • 2024</p>
-                </div>
-            </a>
-            <a href="{{ url_for('static', filename='../static/certificates/IntroductiontoCybersecurity.jpg')}}" target="_blank" style="text-decoration: none;">
-                <div class="certificate-card">
-                    <img src="{{ url_for('static', filename='../static/certificates/IntroductiontoCybersecurity.jpg')}}" alt="Cybersecurity">
-                    <h3>Introduction to Cybersecurity</h3>
-                    <p>Issued by Cisco Networking Academy • 2025</p>
-                </div>
-            </a>
-            <a href="{{ url_for('static', filename='../static/certificates/ComputerHardwareBasicsUpdate20251016-28-dgmk7m_page-0001.jpg')}}" target="_blank" style="text-decoration: none;">
-                <div class="certificate-card">
-                    <img src="{{ url_for('static', filename='../static/certificates/ComputerHardwareBasicsUpdate20251016-28-dgmk7m_page-0001.jpg')}}" alt="Computer Hardware">
-                    <h3>Computer Hardware Basics Update</h3>
-                    <p>Issued by Cisco Networking Academy • 2025</p>
-                </div>
-            </a>
-            <a href="{{ url_for('static', filename='../static/certificates/E-Certificate_1.png')}}" target="_blank" style="text-decoration: none;">
-                <div class="certificate-card">
-                    <img src="{{ url_for('static', filename='../static/certificates/E-Certificate_1.png')}}" alt="Hack-Proof Your Network">
-                    <h3>Hack-Proof Your Network</h3>
-                    <p>Issued by Computer Programming Services • 2026</p>
-                </div>
-            </a>
-            <a href="{{ url_for('static', filename='../static/certificates/E-Certificate_2.png.jpg')}}" target="_blank" style="text-decoration: none;">
-                <div class="certificate-card">
-                    <img src="{{ url_for('static', filename='../static/certificates/E-Certificate_2.png.jpg')}}" alt="Protect Your Digital Identity">
-                    <h3>Protect Your Digital Identity</h3>
-                    <p>Issued by Mariano Marcos State University • 2026</p>
-                </div>
-            </a>
+        
+        <!-- Cisco Certificates -->
+        <div class="certificates-category">
+            <h2 class="certificates-category-title">Cisco Networking Academy</h2>
+            <div class="certificates-grid">
+                <a href="{{ url_for('static', filename='../static/certificates/NetworkingBasicsUpdate20251016-30-isbwer_page-0001.jpg')}}" target="_blank" style="text-decoration: none;">
+                    <div class="certificate-card">
+                        <img src="{{ url_for('static', filename='../static/certificates/NetworkingBasicsUpdate20251016-30-isbwer_page-0001.jpg')}}" alt="Networking Basic">
+                        <h3>Networking Basic</h3>
+                        <p>Issued by Cisco Networking Academy • 2024</p>
+                    </div>
+                </a>
+                <a href="{{ url_for('static', filename='../static/certificates/NetworkSupportandSecurityUpdate20251016-32-1hk533_page-0001.jpg')}}" target="_blank" style="text-decoration: none;">
+                    <div class="certificate-card">
+                        <img src="{{ url_for('static', filename='../static/certificates/NetworkSupportandSecurityUpdate20251016-32-1hk533_page-0001.jpg')}}" alt="Network Support Security">
+                        <h3>Networking Support Security Update</h3>
+                        <p>Issued by Cisco Networking Academy • 2024</p>
+                    </div>
+                </a>
+                <a href="{{ url_for('static', filename='../static/certificates/NetworkAddressingandBasicTroubleshootingUpdate20251016-28-ekc7ve_page-0001.jpg')}}" target="_blank" style="text-decoration: none;">
+                    <div class="certificate-card">
+                        <img src="{{ url_for('static', filename='../static/certificates/NetworkAddressingandBasicTroubleshootingUpdate20251016-28-ekc7ve_page-0001.jpg')}}" alt="Network Addressing">
+                        <h3>Networking Addressing And Basic Troubleshooting</h3>
+                        <p>Issued by Cisco Networking Academy • 2024</p>
+                    </div>
+                </a>
+                <a href="{{ url_for('static', filename='../static/certificates/IntroductiontoCybersecurity.jpg')}}" target="_blank" style="text-decoration: none;">
+                    <div class="certificate-card">
+                        <img src="{{ url_for('static', filename='../static/certificates/IntroductiontoCybersecurity.jpg')}}" alt="Cybersecurity">
+                        <h3>Introduction to Cybersecurity</h3>
+                        <p>Issued by Cisco Networking Academy • 2025</p>
+                    </div>
+                </a>
+                <a href="{{ url_for('static', filename='../static/certificates/ComputerHardwareBasicsUpdate20251016-28-dgmk7m_page-0001.jpg')}}" target="_blank" style="text-decoration: none;">
+                    <div class="certificate-card">
+                        <img src="{{ url_for('static', filename='../static/certificates/ComputerHardwareBasicsUpdate20251016-28-dgmk7m_page-0001.jpg')}}" alt="Computer Hardware">
+                        <h3>Computer Hardware Basics Update</h3>
+                        <p>Issued by Cisco Networking Academy • 2025</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <!-- Other Certificates -->
+        <div class="certificates-category">
+            <h2 class="certificates-category-title">Webinars & Other Certifications</h2>
+            <div class="certificates-grid">
+                <a href="{{ url_for('static', filename='../static/certificates/E-Certificate_1.png')}}" target="_blank" style="text-decoration: none;">
+                    <div class="certificate-card">
+                        <img src="{{ url_for('static', filename='../static/certificates/E-Certificate_1.png')}}" alt="Hack-Proof Your Network">
+                        <h3>Hack-Proof Your Network</h3>
+                        <p>Issued by Computer Programming Services • 2026</p>
+                    </div>
+                </a>
+                <a href="{{ url_for('static', filename='../static/certificates/E-Certificate_2.png.jpg')}}" target="_blank" style="text-decoration: none;">
+                    <div class="certificate-card">
+                        <img src="{{ url_for('static', filename='../static/certificates/E-Certificate_2.png.jpg')}}" alt="Protect Your Digital Identity">
+                        <h3>Protect Your Digital Identity</h3>
+                        <p>Issued by Mariano Marcos State University • 2026</p>
+                    </div>
+                </a>
+                <a href="{{ url_for('static', filename='../static/certificates/E-Certificate_3.png')}}" target="_blank" style="text-decoration: none;">
+                    <div class="certificate-card">
+                        <img src="{{ url_for('static', filename='../static/certificates/E-Certificate_3.png')}}" alt="Data Security Management">
+                        <h3>Data Security Management</h3>
+                        <p>Issued by Computer Programming Services • 2026</p>
+                    </div>
+                </a>
+                <a href="{{ url_for('static', filename='../static/certificates/E-Certificate_4.png')}}" target="_blank" style="text-decoration: none;">
+                    <div class="certificate-card">
+                        <img src="{{ url_for('static', filename='../static/certificates/E-Certificate_4.png')}}" alt="Introduction to Information Security Management">
+                        <h3>Introduction to Information Security Management</h3>
+                        <p>Issued by Computer Programming Services • 2026</p>
+                    </div>
+                </a>
+            </div>
         </div>
     </section>
 
