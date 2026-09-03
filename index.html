@@ -6,45 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Christian Renz Ledesma - Portfolio</title>
     <link rel="shortcut icon" href="static/profile.png" type="image/x-icon">
-    <link rel="stylesheet" href="static/style.css?v=2">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="static/style.css?v=3">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
-        crossorigin="anonymous"></script>
     <style>
         body {
             margin: 0;
-            font-family: 'Segoe UI', sans-serif;
+            font-family: 'Inter', sans-serif;
             min-height: 100vh;
             display: flex;
             flex-direction: column;
-        }
-
-        h3 {
-            white-space: normal;
-        }
-
-        nav.desktop-nav ul {
-            position: relative;
-            top: 10px;
-        }
-
-        @media (max-width: 768px) {
-            .about-content h1,
-            .skills-content h1,
-            .contact-title,
-            .project-content h1,
-            .certificates-content h1 {
-                font-size: 2rem;
-            }
-
-            .about-content p,
-            .skills-content p {
-                font-size: 1rem;
-            }
         }
     </style>
 </head>
@@ -70,7 +44,7 @@
                     <input type="checkbox">
                     <span class="slider"></span>
                 </label>
-                <span class="mode-label" style="margin-left: -20px;">Light Mode</span>
+                <span class="mode-label">Light Mode</span>
             </ul>
         </nav>
     </header>
@@ -97,16 +71,16 @@
 
     <!-- HOME SECTION -->
     <section class="home" id="home">
-        <div id="particles-js"></div>
-
         <div class="home-content">
             <h1 class="theme-text2">
                 Hello, I'm <span class="name-text">Christian Renz Ledesma</span>
             </h1>
             <div class="typing" id="typing-text">
                 <p class="theme-text">
-                    BS Information Technology Student <i class="fa-solid fa-laptop"></i><br>
-                    I am currently studying at NEUST – Papaya Off-Campus. <i class="fa-solid fa-school"></i>
+                    BS Information Technology Student
+                </p>
+                <p class="theme-text" style="color: var(--text-secondary); font-size: 0.95rem;">
+                    I am currently studying at NEUST – Papaya Off-Campus.
                 </p>
                 <div class="button">
                     <a href="#about"><button><i class="fa-solid fa-arrow-right"></i> About</button></a>
@@ -123,7 +97,7 @@
         </div>
     </section>
 
-    <!-- RESUME/CSV MODAL -->
+    <!-- RESUME MODAL -->
     <div id="resumeModal" class="modal">
         <div class="modal-content">
             <div class="modal-header">
@@ -143,7 +117,6 @@
     <!-- ABOUT SECTION -->
     <main>
         <div class="about-content" id="about">
-            <div id="particles-js-about"></div>
             <h1 class="theme-text3">About Me</h1>
             <p class="paragraph-text">
                 Hello, my name is <strong>Christian Renz Ledesma</strong>, and I am studying at <strong>NEUST Papaya
@@ -166,7 +139,6 @@
 
         <!-- SKILLS SECTION -->
         <div class="skills-content" id="skills">
-            <div id="particles-js-skills"></div>
             <h1 class="theme-text3">Skills</h1>
 
             <div class="skills-group-container">
@@ -225,12 +197,11 @@
 
         <!-- PROJECTS SECTION -->
         <section class="project-content" id="projects">
-            <div id="particles-js-projects"></div>
             <h1 class="theme-text3">Projects</h1>
 
             <div class="project-slider">
                 <div class="project-card">
-                    <img src="static/project/Periodic.png" alt="Portfolio Website">
+                    <img src="static/project/Periodic.png" alt="Periodic Table">
                     <div class="project-info">
                         <h3>Periodic Table</h3>
                         <p>An interactive Periodic Table project that displays element information such as atomic
@@ -238,153 +209,144 @@
                         </p>
                         <div class="project-links">
                             <a href="https://github.com/ChristianRenzLedesma/Periodic-table" target="_blank"><i
-                                    class="fa-brands fa-github"></i></a>
+                                    class="fa-brands fa-github"></i> Code</a>
                             <a href="https://christianrenzledesma.github.io/Periodic-table/Periodic.html"
-                                target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                                target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live</a>
                         </div>
                     </div>
                 </div>
 
                 <div class="project-card">
-                    <img src="static/project/polygon.png" alt="Login System">
+                    <img src="static/project/polygon.png" alt="Polygon Shapes">
                     <div class="project-info">
                         <h3>Polygon Shapes</h3>
                         <p>A Polygon Shape Activity that visually demonstrates various geometric shapes such as
-                            triangles, squares, pentagons, and stars using CSS clip-path. Each shape includes its name, number of sides, and
-                            definition to help users understand polygons interactively.</p>
+                            triangles, squares, pentagons, and stars using CSS clip-path.</p>
                         <div class="project-links">
                             <a href="https://github.com/ChristianRenzLedesma/polygons" target="_blank"><i
-                                    class="fa-brands fa-github"></i></a>
+                                    class="fa-brands fa-github"></i> Code</a>
                             <a href="https://christianrenzledesma.github.io/polygons/polygon.html" target="_blank"><i
-                                    class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                                    class="fa-solid fa-arrow-up-right-from-square"></i> Live</a>
                         </div>
                     </div>
                 </div>
 
                 <div class="project-card">
-                    <img src="static/project/Blog1.png" alt="Weather App">
+                    <img src="static/project/Blog1.png" alt="Blog">
                     <div class="project-info">
-                        <h3>Blog 1</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, fugiat cupiditate earum
-                            possimus omnis tempore vitae autem adipisci praesentium officiis a, nihil nulla deleniti
-                            eveniet, iste dignissimos accusamus nam amet.</p>
+                        <h3>Blog</h3>
+                        <p>A personal blog website built with clean HTML and CSS design, showcasing web development
+                            skills and content presentation.</p>
                         <div class="project-links">
                             <a href="https://github.com/ChristianRenzLedesma/blog-3" target="_blank"><i
-                                    class="fa-brands fa-github"></i></a>
+                                    class="fa-brands fa-github"></i> Code</a>
                             <a href="https://christianrenzledesma.github.io/blog-3/index.html" target="_blank"><i
-                                    class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                                    class="fa-solid fa-arrow-up-right-from-square"></i> Live</a>
                         </div>
                     </div>
                 </div>
 
                 <div class="project-card">
-                    <img src="static/project/simple.png" alt="Weather App">
+                    <img src="static/project/simple.png" alt="Marvel Clone">
                     <div class="project-info">
-                        <h3>Simple Website</h3>
-                        <p>The Marvel Clone Site is a fan-made project inspired by the Marvel Cinematic Universe. It
-                            showcases information about Marvel heroes, movies, and shows, giving fans a simple and
-                            organized way to explore the MCU world.</p>
+                        <h3>Marvel Clone Site</h3>
+                        <p>A fan-made project inspired by the Marvel Cinematic Universe. Showcases information about
+                            Marvel heroes, movies, and shows.</p>
                         <div class="project-links">
                             <a href="https://github.com/ChristianRenzLedesma/Simple-Website-" target="_blank"><i
-                                    class="fa-brands fa-github"></i></a>
+                                    class="fa-brands fa-github"></i> Code</a>
                             <a href="https://christianrenzledesma.github.io/Simple-Website-/Marvel%20Clone%20Site!.html"
-                                target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                                target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live</a>
                         </div>
                     </div>
                 </div>
 
                 <div class="project-card">
-                    <img src="static/project/Crud.png" alt="Weather App">
+                    <img src="static/project/Crud.png" alt="CRUD Application">
                     <div class="project-info">
-                        <h3>Crud</h3>
-                        <p>A web-based CRUD (Create, Read, Update, Delete) application built with HTML, CSS, and
-                            JavaScript. It allows users to manage student information efficiently by adding, editing,
-                            viewing, and deleting records.</p>
+                        <h3>CRUD Application</h3>
+                        <p>A web-based CRUD application built with HTML, CSS, and JavaScript. Allows users to manage
+                            student information efficiently.</p>
                         <div class="project-links">
                             <a href="https://github.com/ChristianRenzLedesma/Crud" target="_blank"><i
-                                    class="fa-brands fa-github"></i></a>
+                                    class="fa-brands fa-github"></i> Code</a>
                             <a href="https://christianrenzledesma.github.io/Crud/crud.html" target="_blank"><i
-                                    class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                                    class="fa-solid fa-arrow-up-right-from-square"></i> Live</a>
                         </div>
                     </div>
                 </div>
 
                 <div class="project-card">
-                    <img src="static/project/HDDparts.png" alt="Weather App">
+                    <img src="static/project/HDDparts.png" alt="Hard Disk Drive Parts">
                     <div class="project-info">
                         <h3>Hard Disk Drive Parts</h3>
-                        <p>A hard drive is a device that stores and retrieves data using magnetic disks. It has parts
-                            like the platter for data storage, read/write head for accessing data, actuator arm for
-                            movement, spindle for spinning the disks, and circuit board for control and power.</p>
+                        <p>An interactive educational project explaining hard drive components like platters, read/write
+                            heads, and actuator arms.</p>
                         <div class="project-links">
                             <a href="https://github.com/ChristianRenzLedesma/HDD-PARTS" target="_blank"><i
-                                    class="fa-brands fa-github"></i></a>
+                                    class="fa-brands fa-github"></i> Code</a>
                             <a href="https://christianrenzledesma.github.io/HDD-PARTS/" target="_blank"><i
-                                    class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                                    class="fa-solid fa-arrow-up-right-from-square"></i> Live</a>
                         </div>
                     </div>
                 </div>
 
                 <div class="project-card">
-                    <img src="static/project/Monopology.png" alt="Weather App">
+                    <img src="static/project/Monopology.png" alt="Monopoly">
                     <div class="project-info">
                         <h3>Monopoly</h3>
-                        <p>A digital recreation of the classic Monopoly board game, where players buy, trade, and manage
-                            properties to become the wealthiest player.</p>
+                        <p>A digital recreation of the classic Monopoly board game, where players buy, trade, and
+                            manage properties.</p>
                         <div class="project-links">
                             <a href="https://github.com/ChristianRenzLedesma/Monopoly" target="_blank"><i
-                                    class="fa-brands fa-github"></i></a>
+                                    class="fa-brands fa-github"></i> Code</a>
                             <a href="https://christianrenzledesma.github.io/Monopoly/" target="_blank"><i
-                                    class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                                    class="fa-solid fa-arrow-up-right-from-square"></i> Live</a>
                         </div>
                     </div>
                 </div>
 
                 <div class="project-card">
-                    <img src="static/project/chess.png" alt="Weather App">
+                    <img src="static/project/chess.png" alt="Chessboard">
                     <div class="project-info">
                         <h3>Chessboard</h3>
-                        <p>A simple web-based chessboard created using HTML and CSS. The project demonstrates the use of
-                            grid layouts, color styling, and table structures to design an 8×8 chessboard pattern.</p>
+                        <p>A web-based chessboard created using HTML and CSS, demonstrating grid layouts and table
+                            structures for an 8x8 pattern.</p>
                         <div class="project-links">
                             <a href="https://github.com/ChristianRenzLedesma/Chessboard" target="_blank"><i
-                                    class="fa-brands fa-github"></i></a>
+                                    class="fa-brands fa-github"></i> Code</a>
                             <a href="https://christianrenzledesma.github.io/Chessboard/activity.html" target="_blank"><i
-                                    class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                                    class="fa-solid fa-arrow-up-right-from-square"></i> Live</a>
                         </div>
                     </div>
                 </div>
 
                 <div class="project-card">
-                    <img src="static/project/calculator.png" alt="Weather App">
+                    <img src="static/project/calculator.png" alt="Calculator">
                     <div class="project-info">
                         <h3>Calculator</h3>
-                        <p>A simple web-based calculator built using HTML, CSS, and JavaScript. The project performs
-                            basic arithmetic operations such as addition, subtraction, multiplication, and division. It
-                            showcases responsive layout design, interactive button functionality, and clean user
-                            interface styling.</p>
+                        <p>A web-based calculator built with HTML, CSS, and JavaScript. Performs basic arithmetic
+                            operations with a responsive layout.</p>
                         <div class="project-links">
                             <a href="https://github.com/ChristianRenzLedesma/Calculator" target="_blank"><i
-                                    class="fa-brands fa-github"></i></a>
+                                    class="fa-brands fa-github"></i> Code</a>
                             <a href="https://christianrenzledesma.github.io/Calculator/" target="_blank"><i
-                                    class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                                    class="fa-solid fa-arrow-up-right-from-square"></i> Live</a>
                         </div>
                     </div>
                 </div>
 
                 <div class="project-card">
-                    <img src="static/project/Movie.png" alt="Weather App">
+                    <img src="static/project/Movie.png" alt="Movlix">
                     <div class="project-info">
                         <h3>Movlix</h3>
-                        <p>Movlix is a movie trailer website built using HTML, CSS, and JavaScript. It integrates a
-                            movie API to display YouTube trailers, allowing users to watch previews of various films
-                            directly on the site. The project demonstrates API fetching, dynamic content rendering, and
-                            a responsive layout for an engaging viewing experience.</p>
+                        <p>A movie trailer website that integrates a movie API to display YouTube trailers, allowing
+                            users to watch previews directly on the site.</p>
                         <div class="project-links">
                             <a href="https://app.netlify.com/projects/movlixxx/overview" target="_blank"><i
-                                    class="fa-solid fa-globe"></i></a>
+                                    class="fa-solid fa-globe"></i> Deploy</a>
                             <a href="https://movlixxx.netlify.app/" target="_blank"><i
-                                    class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                                    class="fa-solid fa-arrow-up-right-from-square"></i> Live</a>
                         </div>
                     </div>
                 </div>
@@ -397,53 +359,43 @@
 
             <div class="certificates-grid">
                 <a href="static/certificates/NetworkingBasicsUpdate20251016-30-isbwer_page-0001.jpg"
-                    target="_blank" style="text-decoration: none;">
-                    <div class="certificate-card">
-                        <img src="static/certificates/NetworkingBasicsUpdate20251016-30-isbwer_page-0001.jpg"
-                            alt="Web Development Certificate">
-                        <h3>Networking Basic</h3>
-                        <p>Issued by Cisco Networking Academy • 2024</p>
-                    </div>
+                    target="_blank" class="certificate-card">
+                    <img src="static/certificates/NetworkingBasicsUpdate20251016-30-isbwer_page-0001.jpg"
+                        alt="Networking Basics Certificate">
+                    <h3>Networking Basics</h3>
+                    <p>Issued by Cisco Networking Academy &bull; 2024</p>
                 </a>
 
                 <a href="static/certificates/NetworkSupportandSecurityUpdate20251016-32-1hk533_page-0001.jpg"
-                    target="_blank" style="text-decoration: none;">
-                    <div class="certificate-card">
-                        <img src="static/certificates/NetworkSupportandSecurityUpdate20251016-32-1hk533_page-0001.jpg"
-                            alt="Web Development Certificate">
-                        <h3>Networking Support Security Update</h3>
-                        <p>Issued by Cisco Networking Academy • 2024</p>
-                    </div>
+                    target="_blank" class="certificate-card">
+                    <img src="static/certificates/NetworkSupportandSecurityUpdate20251016-32-1hk533_page-0001.jpg"
+                        alt="Network Support Security Certificate">
+                    <h3>Network Support & Security</h3>
+                    <p>Issued by Cisco Networking Academy &bull; 2024</p>
                 </a>
 
                 <a href="static/certificates/NetworkAddressingandBasicTroubleshootingUpdate20251016-28-ekc7ve_page-0001.jpg"
-                    target="_blank" style="text-decoration: none;">
-                    <div class="certificate-card">
-                        <img src="static/certificates/NetworkAddressingandBasicTroubleshootingUpdate20251016-28-ekc7ve_page-0001.jpg"
-                            alt="Python Certificate">
-                        <h3>Networking Addressing And Basic Troubleshooting</h3>
-                        <p>Issued by Cisco Networking Academy • 2024</p>
-                    </div>
+                    target="_blank" class="certificate-card">
+                    <img src="static/certificates/NetworkAddressingandBasicTroubleshootingUpdate20251016-28-ekc7ve_page-0001.jpg"
+                        alt="Network Addressing Certificate">
+                    <h3>Network Addressing & Troubleshooting</h3>
+                    <p>Issued by Cisco Networking Academy &bull; 2024</p>
                 </a>
 
                 <a href="static/certificates/IntroductiontoCybersecurity.jpg"
-                    target="_blank" style="text-decoration: none;">
-                    <div class="certificate-card">
-                        <img src="static/certificates/IntroductiontoCybersecurity.jpg"
-                            alt="Cybersecurity Certificate">
-                        <h3>Introduction to Cybersecurity</h3>
-                        <p>Issued by Cisco Networking Academy • 2025</p>
-                    </div>
+                    target="_blank" class="certificate-card">
+                    <img src="static/certificates/IntroductiontoCybersecurity.jpg"
+                        alt="Introduction to Cybersecurity Certificate">
+                    <h3>Introduction to Cybersecurity</h3>
+                    <p>Issued by Cisco Networking Academy &bull; 2025</p>
                 </a>
 
                 <a href="static/certificates/ComputerHardwareBasicsUpdate20251016-28-dgmk7m_page-0001.jpg"
-                    target="_blank" style="text-decoration: none;">
-                    <div class="certificate-card">
-                        <img src="static/certificates/ComputerHardwareBasicsUpdate20251016-28-dgmk7m_page-0001.jpg"
-                            alt="Web Development Certificate">
-                        <h3>Computer Hardware Basics Update</h3>
-                        <p>Issued by Cisco Networking Academy • 2025</p>
-                    </div>
+                    target="_blank" class="certificate-card">
+                    <img src="static/certificates/ComputerHardwareBasicsUpdate20251016-28-dgmk7m_page-0001.jpg"
+                        alt="Computer Hardware Basics Certificate">
+                    <h3>Computer Hardware Basics</h3>
+                    <p>Issued by Cisco Networking Academy &bull; 2025</p>
                 </a>
             </div>
         </section>
@@ -451,13 +403,11 @@
 
     <!-- CONTACT SECTION -->
     <section class="contact" id="contact">
-        <div id="particles-js-contact"></div>
-        <h1 class="contact-title">GET IN TOUCH</h1>
+        <h1 class="contact-title">Get in Touch</h1>
 
         <div class="contact-container">
-            <!-- INFO SECTION -->
             <div class="contact-info">
-                <h2>DON'T BE SHY</h2>
+                <h2>Let's Connect</h2>
                 <p>
                     Feel free to get in touch with me. I am always open to discussing new
                     projects, creative ideas or opportunities to be part of your visions.
@@ -478,12 +428,10 @@
                 </div>
             </div>
 
-            <!-- FORM SECTION -->
             <form action="https://formspree.io/f/movkrnge" method="POST" class="contact-form">
-                <input type="text" id="name" name="Name" placeholder="Enter your name" required />
-                <input type="email" id="email" name="Email" placeholder="Enter your email" required />
-                <textarea id="message" name="Message" rows="5" placeholder="Enter your message" required></textarea>
-
+                <input type="text" id="name" name="Name" placeholder="Your name" required />
+                <input type="email" id="email" name="Email" placeholder="Your email" required />
+                <textarea id="message" name="Message" rows="5" placeholder="Your message" required></textarea>
                 <button type="submit">Send Message</button>
             </form>
         </div>
@@ -493,7 +441,7 @@
     <footer class="footer-content">
         <div class="footer-container">
             <div class="footer-left">
-                <p>© 2025 Christian Renz Ledesma. All rights reserved.</p>
+                <p>&copy; 2025 Christian Renz Ledesma. All rights reserved.</p>
             </div>
 
             <div class="footer-center">
@@ -513,8 +461,35 @@
         </div>
     </footer>
 
+    <!-- AI CHAT WIDGET -->
+    <button class="ai-chat-toggle" onclick="toggleAIChat()" aria-label="Open AI chat" title="AI Assistant">
+        <i class="fa-solid fa-robot"></i>
+    </button>
+
+    <div class="ai-chat-window" id="aiChatWindow">
+        <div class="ai-chat-header">
+            <div class="ai-chat-header-left">
+                <i class="fa-solid fa-robot"></i>
+                <h3>AI Assistant</h3>
+            </div>
+            <button class="ai-chat-close" onclick="toggleAIChat()" aria-label="Close chat">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+        </div>
+        <div class="ai-chat-messages" id="aiChatMessages">
+            <div class="ai-chat-message assistant">
+                Hi! I'm the AI assistant for this portfolio. Ask me anything about Christian, his skills, projects, or experience.
+            </div>
+        </div>
+        <div class="ai-chat-input">
+            <input type="text" id="aiChatInput" placeholder="Ask me anything..." autocomplete="off">
+            <button class="ai-chat-send" onclick="sendAIChat()" aria-label="Send message" id="aiChatSend">
+                <i class="fa-solid fa-paper-plane"></i>
+            </button>
+        </div>
+    </div>
+
     <!-- JS -->
-    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
     <script>
         const body = document.body;
         const toggles = document.querySelectorAll('.mode-toggle input');
@@ -556,18 +531,15 @@
                     localStorage.setItem('theme', 'light');
                 }
                 updateLabels();
-                initParticles();
             });
         });
 
-        // Update nav link active state on scroll
         window.addEventListener('scroll', () => {
             let current = '';
             const sections = document.querySelectorAll('section, main');
-            
+
             sections.forEach(section => {
                 const sectionTop = section.offsetTop;
-                const sectionHeight = section.clientHeight;
                 if (pageYOffset >= sectionTop - 200) {
                     current = section.getAttribute('id');
                 }
@@ -581,60 +553,10 @@
             });
         });
 
-        let particlesInitialized = false;
-
-        function initParticles() {
-            const particleColor = body.classList.contains('dark-mode') ? "#00ffff" : "#003366";
-
-            if (particlesInitialized && window.pJSDom && window.pJSDom.length > 0) {
-                window.pJSDom[0].pJS.fn.vendors.destroypJS();
-                window.pJSDom = [];
-            }
-
-            particlesJS("particles-js", {
-                "particles": {
-                    "number": { "value": 90 },
-                    "color": { "value": particleColor },
-                    "shape": { "type": "circle" },
-                    "opacity": { "value": 0.4 },
-                    "size": { "value": 3 },
-                    "line_linked": {
-                        "enable": true,
-                        "distance": 150,
-                        "color": particleColor,
-                        "opacity": 0.3,
-                        "width": 1
-                    },
-                    "move": {
-                        "enable": true,
-                        "speed": 3,
-                        "direction": "none",
-                        "out_mode": "out"
-                    }
-                },
-                "interactivity": {
-                    "detect_on": "canvas",
-                    "events": {
-                        "onhover": { "enable": true, "mode": "grab" },
-                        "onclick": { "enable": true, "mode": "push" }
-                    },
-                    "modes": {
-                        "grab": { "distance": 200, "line_linked": { "opacity": 1 } }
-                    }
-                },
-                "retina_detect": true
-            });
-
-            particlesInitialized = true;
-        }
-
-        initParticles();
-
         window.addEventListener("load", () => {
             document.body.classList.add("loaded");
         });
 
-        // Resume Modal Functions
         function openResumeModal() {
             document.getElementById('resumeModal').classList.add('show');
             document.body.style.overflow = 'hidden';
@@ -652,7 +574,6 @@
             }
         });
 
-        // Download CSV
         function downloadCSV() {
             const csvContent = [
                 ['Christian Renz Ledesma - Resume'],
@@ -666,7 +587,7 @@
                 ['EDUCATION'],
                 ['School', 'NEUST – Papaya Off-Campus'],
                 ['Program', 'BS Information Technology'],
-                ['Status', 'Third-year Student'],
+                ['Status', 'Fourth-year Student'],
                 [],
                 ['SKILLS - FRONT-END'],
                 ['HTML', 'CSS', 'JavaScript', 'React'],
@@ -687,7 +608,7 @@
                 ['Protect Your Digital Identity', '2026']
             ];
 
-            const csvString = csvContent.map(row => 
+            const csvString = csvContent.map(row =>
                 row.map(cell => `"${cell}"`).join(',')
             ).join('\n');
 
@@ -697,7 +618,6 @@
             link.click();
         }
 
-        // Download PNG
         function downloadPNG() {
             const image = document.getElementById('resumeImage');
             const link = document.createElement('a');
@@ -705,6 +625,218 @@
             link.download = 'Christian_Renz_Ledesma_Resume.png';
             link.click();
         }
+
+        // ===== AI CHAT =====
+        let chatHistory = [];
+        let chatOpen = false;
+
+        function toggleAIChat() {
+            chatOpen = !chatOpen;
+            document.getElementById('aiChatWindow').classList.toggle('open', chatOpen);
+            if (chatOpen) {
+                document.getElementById('aiChatInput').focus();
+            }
+            localStorage.setItem('aiChatOpen', chatOpen ? '1' : '0');
+        }
+
+        function addChatMessage(role, content) {
+            const messages = document.getElementById('aiChatMessages');
+            const el = document.createElement('div');
+            el.className = 'ai-chat-message ' + role;
+            if (role === 'assistant') {
+                el.innerHTML = renderMarkdown(content);
+            } else {
+                el.textContent = content;
+            }
+            messages.appendChild(el);
+            messages.scrollTop = messages.scrollHeight;
+        }
+
+        function escapeHtml(text) {
+            const div = document.createElement('div');
+            div.textContent = text;
+            return div.innerHTML;
+        }
+
+        // Typewriter: reveals text character-by-character inside an element
+        async function typewriteInto(el, text) {
+            el.textContent = '';
+            const cursor = document.createElement('span');
+            cursor.className = 'typing-cursor';
+            el.appendChild(cursor);
+
+            const messages = document.getElementById('aiChatMessages');
+            const textNode = document.createTextNode('');
+            el.insertBefore(textNode, cursor);
+
+            for (let i = 0; i <= text.length; i++) {
+                textNode.textContent = text.slice(0, i);
+                messages.scrollTop = messages.scrollHeight;
+
+                let delay = 8; // 8ms per char - very fast
+                const ch = text[i];
+                if (ch === '.' || ch === ',' || ch === '!' || ch === '?' || ch === ';' || ch === ':') {
+                    delay = 120; // brief pause at punctuation
+                }
+                await new Promise(r => setTimeout(r, delay));
+            }
+
+            cursor.remove();
+        }
+
+        function renderMarkdown(text) {
+            let html = text;
+
+            html = html.replace(/```(\w*)\n([\s\S]*?)```/g, function(match, lang, code) {
+                return '<pre><code>' + escapeHtml(code.trim()) + '</code></pre>';
+            });
+
+            html = html.replace(/`([^`\n]+)`/g, function(match, code) {
+                return '<code>' + escapeHtml(code) + '</code>';
+            });
+
+            html = html.replace(/^\s*# (.*)$/gm, '<h1>$1</h1>');
+            html = html.replace(/^\s*## (.*)$/gm, '<h2>$1</h2>');
+            html = html.replace(/^\s*### (.*)$/gm, '<h3>$1</h3>');
+            html = html.replace(/^\s*#### (.*)$/gm, '<h4>$1</h4>');
+
+            html = html.replace(/^\s*> (.*)$/gm, '<blockquote>$1</blockquote>');
+
+            html = html.replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" target="_blank" rel="noopener">$1</a>');
+
+            let inList = false;
+            let listType = null;
+            const lines = html.split('\n');
+            const out = [];
+
+            for (const line of lines) {
+                const ulMatch = line.match(/^\s*[-*]\s+(.+)$/);
+                const olMatch = line.match(/^\s*\d+\.\s+(.+)$/);
+
+                if (ulMatch) {
+                    if (!inList || listType !== 'ul') {
+                        if (inList) out.push('</ol>');
+                        out.push('<ul>');
+                        inList = true;
+                        listType = 'ul';
+                    }
+                    out.push('<li>' + ulMatch[1] + '</li>');
+                    continue;
+                }
+                if (olMatch) {
+                    if (!inList || listType !== 'ol') {
+                        if (inList) out.push('</ul>');
+                        out.push('<ol>');
+                        inList = true;
+                        listType = 'ol';
+                    }
+                    out.push('<li>' + olMatch[1] + '</li>');
+                    continue;
+                }
+                if (inList) {
+                    out.push(listType === 'ul' ? '</ul>' : '</ol>');
+                    inList = false;
+                }
+                out.push(line);
+            }
+            if (inList) {
+                out.push(listType === 'ul' ? '</ul>' : '</ol>');
+            }
+            html = out.join('\n');
+
+            html = html.replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>');
+            html = html.replace(/\*([^*]+)\*/g, '<em>$1</em>');
+            html = html.replace(/__([^_]+)__/g, '<strong>$1</strong>');
+            html = html.replace(/_([^_]+)_/g, '<em>$1</em>');
+
+            html = html.replace(/^\s*---+$/gm, '<hr>');
+
+            html = html.replace(/\n{2,}/g, '\n\n');
+
+            const paragraphs = html.split(/\n{2,}/);
+            const wrapped = paragraphs.map(function(p) {
+                p = p.trim();
+                if (!p) return '';
+                if (/^<[hou]|^<(ul|ol|blockquote|pre|hr)/.test(p)) return p;
+                if (/^<(h[1-4]|li|p)\b/.test(p)) return p;
+                return '<p>' + p.replace(/\n/g, '<br>') + '</p>';
+            }).join('');
+
+            return wrapped;
+        }
+
+        function showTyping() {
+            const messages = document.getElementById('aiChatMessages');
+            const el = document.createElement('div');
+            el.className = 'ai-chat-message assistant typing';
+            el.innerHTML = '<span></span><span></span><span></span>';
+            el.id = 'typingIndicator';
+            messages.appendChild(el);
+            messages.scrollTop = messages.scrollHeight;
+        }
+
+        function removeTyping() {
+            const typing = document.getElementById('typingIndicator');
+            if (typing) typing.remove();
+        }
+
+        async function sendAIChat() {
+            const input = document.getElementById('aiChatInput');
+            const message = input.value.trim();
+            if (!message) return;
+
+            const sendBtn = document.getElementById('aiChatSend');
+            sendBtn.disabled = true;
+            input.value = '';
+
+            addChatMessage('user', message);
+            chatHistory.push({ role: 'user', content: message });
+            showTyping();
+
+            try {
+                const response = await fetch('/api/chat', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        message: message,
+                        history: chatHistory.slice(0, -1)
+                    })
+                });
+
+                const data = await response.json();
+                removeTyping();
+
+                if (!response.ok) {
+                    addChatMessage('error', data.error || 'Something went wrong. Please try again.');
+                    return;
+                }
+
+                // Fresh bubble for the assistant reply, typed out char-by-char
+                const messages = document.getElementById('aiChatMessages');
+                const bubble = document.createElement('div');
+                bubble.className = 'ai-chat-message assistant';
+                messages.appendChild(bubble);
+                messages.scrollTop = messages.scrollHeight;
+
+                await typewriteInto(bubble, data.reply);
+                bubble.innerHTML = renderMarkdown(data.reply);
+
+                chatHistory.push({ role: 'assistant', content: data.reply });
+            } catch (err) {
+                removeTyping();
+                addChatMessage('error', 'Could not connect to the AI service. Please try again.');
+            } finally {
+                sendBtn.disabled = false;
+                input.focus();
+            }
+        }
+
+        document.getElementById('aiChatInput').addEventListener('keydown', (e) => {
+            if (e.key === 'Enter') {
+                e.preventDefault();
+                sendAIChat();
+            }
+        });
     </script>
 </body>
 

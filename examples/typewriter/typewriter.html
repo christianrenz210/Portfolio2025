@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Typewriter AI Message</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background: #0f172a;
+            color: #f1f5f9;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .chat {
+            width: 360px;
+            background: #1e293b;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 12px;
+            padding: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 1rem;
+        }
+
+        /* Generic bubble */
+        .bubble {
+            max-width: 100%;
+            background: #334155;
+            padding: 0.75rem 1rem;
+            border-radius: 12px;
+            border-bottom-left-radius: 3px;
+            font-size: 0.9rem;
+            line-height: 1.5;
+            word-wrap: break-word;
+            white-space: pre-wrap;
+            color: #f1f5f9;
+        }
+
+        /* ===== 3 bouncing dots ===== */
+        .dots {
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            min-width: 34px;
+        }
+
+        .dots span {
+            width: 7px;
+            height: 7px;
+            border-radius: 50%;
+            background: #94a3b8;
+            animation: bounce 1.2s infinite ease-in-out;
+        }
+
+        /* Sequential delays for the 3 dots */
+        .dots span:nth-child(1) { animation-delay: 0s; }
+        .dots span:nth-child(2) { animation-delay: 0.15s; }
+        .dots span:nth-child(3) { animation-delay: 0.3s; }
+
+        @keyframes bounce {
+            0%, 60%, 100% { transform: translateY(0); opacity: 0.35; }
+            30% { transform: translateY(-6px); opacity: 1; }
+        }
+
+        /* ===== Typewriter cursor ===== */
+        .cursor {
+            display: inline-block;
+            width: 2px;
+            height: 1em;
+            background: #94a3b8;
+            vertical-align: text-bottom;
+            margin-left: 2px;
+            animation: blink 0.7s step-end infinite;
+        }
+
+        /* Hide cursor when typing is done (class toggled via JS) */
+        .cursor.hidden {
+            display: none;
+        }
+
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0; }
+        }
+
+        button {
+            margin-top: 1rem;
+            padding: 0.6rem 1.2rem;
+            border: none;
+            border-radius: 8px;
+            background: #2563eb;
+            color: #fff;
+            font-weight: 600;
+            cursor: pointer;
+        }
+
+        button:hover { opacity: 0.85; }
+    </style>
+</head>
+<body>
+
+    <div class="chat">
+        <div class="bubble">
+            <span id="dots" class="dots"><span></span><span></span><span></span></span>
+            <span id="message"></span>
+            <span id="cursor" class="cursor"></span>
+        </div>
+
+        <button onclick="runSequence()">Play typing</button>
+    </div>
+
+    <script>
+        const dotsEl = document.getElementById('dots');
+        const messageEl = document.getElementById('message');
+        const cursorEl = document.getElementById('cursor');
+
+        const TEXT = 'Hello! I healed your device, Christian.';
+
+        async function typeMessage(text) {
+            // Reset cursor to visible (blinking)
+            cursorEl.classList.remove('hidden');
+
+            for (let i = 0; i <= text.length; i++) {
+                // Don't place the cursor after the final char (it blinks while typing)
+                if (i < text.length) {
+                    messageEl.textContent = text.slice(0, i + 1);
+                } else {
+                    messageEl.textContent = text;
+                }
+
+                // Pause longer at punctuation
+                const ch = text[i];
+                let delay = 60; // 60ms per char
+                if (ch === '.' || ch === ',' || ch === '!' || ch === '?' || ch === ';' || ch === ':') {
+                    delay = 450; // longer pause
+                }
+
+                await wait(delay);
+            }
+
+            // Typing done -> hide cursor
+            cursorEl.classList.add('hidden');
+        }
+
+        function wait(ms) {
+            return new Promise(resolve => setTimeout(resolve, ms));
+        }
+
+        async function runSequence() {
+            // 1. Reset
+            messageEl.textContent = '';
+            cursorEl.classList.add('hidden');
+
+            // 2. Show 3 bouncing dots for 1.5s (simulating "AI is thinking")
+            dotsEl.hidden = false;
+            await wait(1500);
+
+            // 3. Hide dots, show cursor, start typing
+            dotsEl.hidden = true;
+            cursorEl.classList.remove('hidden');
+            await typeMessage(TEXT);
+        }
+    </script>
+
+</body>
+</html>
